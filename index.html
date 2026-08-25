@@ -1,182 +1,277 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="vi">
+<html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mến Flower Shop | Trang chủ</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mến Flower Shop | Tiệm hoa tại Huế</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind-config.js"></script>
   <link href="assets/css/styles.css" rel="stylesheet">
 </head>
-<body class="text-on-background antialiased pt-14 md:pt-20">
-  <nav class="site-nav fixed top-0 w-full z-50 border-b border-outline-variant/20">
-    <div class="flex justify-between items-center h-14 md:h-20 px-4 md:px-margin-desktop max-w-container-max mx-auto">
-      <a href="index.html" class="brand-logo text-[28px] md:text-[34px] text-primary">Mến <em>Flower</em></a>
-      <div class="hidden md:flex gap-8 items-center">
-        <a class="text-primary border-b border-primary pb-0.5 text-sm tracking-wide" href="index.html">Trang chủ</a>
-        <a class="text-on-surface-variant hover:text-primary text-sm tracking-wide" href="collection.html">Bộ sưu tập</a>
-        <a class="text-on-surface-variant hover:text-primary text-sm tracking-wide" href="about.html">Về chúng tôi</a>
-        <a class="text-on-surface-variant hover:text-primary text-sm tracking-wide" href="contact.html">Liên hệ</a>
+<body>
+  <div class="topbar">Nơi nhận hoa: <strong>Huế</strong> · Gọi <a href="tel:0905823326">0905 823 326</a></div>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="logo" href="index.html">Mến Flower<small>Tiệm hoa tại Huế</small></a>
+      <form class="search" action="collection.html" method="get">
+        <input name="q" type="search" placeholder="Tìm sản phẩm">
+        <button type="submit">Tìm kiếm</button>
+      </form>
+      <div class="hotline">
+        <span>HOTLINE HUẾ</span>
+        <a href="tel:0905823326">0905 823 326</a>
       </div>
-      <a href="https://www.facebook.com/men.phan.9843" target="_blank" rel="noopener" class="btn-shine hidden md:inline-flex bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2 rounded-full text-sm">Đặt hoa</a>
-      <button type="button" class="md:hidden text-primary" data-nav-toggle aria-expanded="false" aria-label="Mở menu">
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Mở menu">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
-    <div class="mobile-menu" data-nav-menu aria-hidden="true">
-      <div class="mobile-menu__panel">
-        <p class="mobile-menu__kicker">Huế · Mến Runbyy</p>
-        <div class="mobile-menu__nav">
-          <a class="mobile-menu__link is-current" href="index.html"><span>01</span> Trang chủ</a>
-          <a class="mobile-menu__link" href="collection.html"><span>02</span> Bộ sưu tập</a>
-          <a class="mobile-menu__link" href="about.html"><span>03</span> Về chúng tôi</a>
-          <a class="mobile-menu__link" href="contact.html"><span>04</span> Liên hệ</a>
-        </div>
-        <div class="mobile-menu__banner">
-          <img src="assets/images/hoa-sap.jpg" alt="">
-          <span>Mâm quả · Hoa sáp · Hoa tiền</span>
-        </div>
-        <p class="mobile-menu__meta">VQT, Hương Phong, TP. Huế<br><a href="tel:0905823326">0905 823 326</a></p>
-        <div class="mobile-menu__cta">
-          <a href="tel:0905823326">Gọi ngay</a>
-          <a href="https://www.facebook.com/men.phan.9843" target="_blank" rel="noopener">Facebook</a>
-        </div>
-      </div>
+  </header>
+
+  <nav class="mainnav">
+    <div class="mainnav__inner">
+      <a class="is-current" href="index.html">Trang chủ</a>
+      <a href="collection.html?cat=wedding">Mâm quả</a>
+      <a href="collection.html?cat=soap">Hoa sáp</a>
+      <a href="collection.html?cat=money">Hoa tiền</a>
+      <a href="collection.html?cat=fresh">Hoa tươi</a>
+      <a href="about.html">Về chúng tôi</a>
+      <a href="contact.html">Liên hệ</a>
     </div>
   </nav>
 
-  <header class="site-hero relative overflow-hidden">
-    <div class="orb w-56 h-56 bg-primary-container/40 -top-10 -right-10"></div>
-    <div class="orb w-40 h-40 bg-secondary-container/50 top-40 -left-10" style="animation-delay: 1.4s"></div>
+  <div class="mobile-menu" data-nav-menu aria-hidden="true">
+    <form class="search mobile-search" action="collection.html" method="get">
+      <input name="q" type="search" placeholder="Tìm sản phẩm">
+      <button type="submit">Tìm</button>
+    </form>
+    <a href="index.html">Trang chủ</a>
+    <a href="collection.html?cat=wedding">Mâm quả</a>
+    <a href="collection.html?cat=soap">Hoa sáp</a>
+    <a href="collection.html?cat=money">Hoa tiền</a>
+    <a href="collection.html?cat=fresh">Hoa tươi</a>
+    <a href="about.html">Về chúng tôi</a>
+    <a href="contact.html">Liên hệ</a>
+    <a href="tel:0905823326">Gọi 0905 823 326</a>
+  </div>
 
-    <div class="md:hidden relative hero-photo h-[58vh] min-h-[390px]">
-      <img class="absolute inset-0 w-full h-full object-cover" alt="Mâm lễ cưới hỏi Mến Flower Shop" src="assets/images/hero-cover.jpg">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#1c1011] via-[#1c1011]/45 to-black/5"></div>
-      <div class="absolute inset-x-0 bottom-0 px-4 pb-4 text-white">
-        <p class="eyebrow text-[#ffb2b7] mb-1">Huế · Mến Runbyy</p>
-        <h1 class="font-display-lg text-[34px] leading-[1.15] mb-1.5">Hoa sáp thơm,<br><span class="italic">mâm quả cưới hỏi</span></h1>
-        <p class="text-[13px] leading-5 text-white/88 mb-3">Nhận mâm Long Phụng, hoa tiền và gấu tốt nghiệp.</p>
-        <div class="flex gap-2">
-          <a class="btn-shine flex-1 text-center bg-gradient-to-r from-primary to-primary-container text-white rounded-full py-2.5 text-sm shadow-lg" href="collection.html">Xem mẫu</a>
-          <a class="flex-1 text-center border border-white/60 text-white rounded-full py-2.5 text-sm" href="about.html">Câu chuyện</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hidden md:grid max-w-container-max mx-auto grid-cols-12 gap-gutter items-center px-margin-desktop py-24 relative z-10">
-      <div class="col-span-5">
-        <p class="eyebrow mb-4">Huế · Mến Runbyy</p>
-        <h1 class="text-display-lg font-display-lg text-on-background mb-6 leading-tight">Hoa sáp thơm,<br><span class="italic text-primary">mâm quả cưới hỏi.</span></h1>
-        <p class="text-body-lg text-on-surface-variant mb-8 max-w-md">Tiệm hoa tại Huế chuyên hoa sáp thơm, mâm lễ cưới hỏi, hoa tiền và gấu tốt nghiệp. Nhắn Facebook để đặt mẫu theo ý.</p>
-        <div class="flex gap-3">
-          <a class="btn-shine bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3.5 rounded-full" href="collection.html">Xem sản phẩm</a>
-          <a class="border border-outline text-primary px-8 py-3.5 rounded-full hover:bg-primary-fixed/40" href="about.html">Câu chuyện</a>
-        </div>
-      </div>
-      <div class="col-span-7 relative">
-        <div class="hero-photo relative aspect-[4/5] rounded-[28px] overflow-hidden soft-shadow">
-          <img class="w-full h-full object-cover" alt="Mâm lễ cưới hỏi kết rồng phượng" src="assets/images/hero-cover.jpg">
-        </div>
-        <div class="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-lg w-72">
-          <p class="eyebrow mb-1">Mâm lễ giá tốt</p>
-          <p class="text-sm text-on-surface-variant">Từ 3.000.000₫ · Hoa tiền, hoa sáp nhận theo yêu cầu.</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="px-4 md:px-margin-desktop pt-5 md:pt-10">
-    <div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-2.5 md:gap-4">
-      <div class="service-chip reveal-on-scroll"><span class="material-symbols-outlined text-primary text-[20px]">favorite</span><span class="text-[12px] md:text-sm">Mâm quả cưới</span></div>
-      <div class="service-chip reveal-on-scroll"><span class="material-symbols-outlined text-primary text-[20px]">spa</span><span class="text-[12px] md:text-sm">Hoa sáp thơm</span></div>
-      <div class="service-chip reveal-on-scroll"><span class="material-symbols-outlined text-primary text-[20px]">payments</span><span class="text-[12px] md:text-sm">Hoa tiền</span></div>
-      <div class="service-chip reveal-on-scroll"><span class="material-symbols-outlined text-primary text-[20px]">redeem</span><span class="text-[12px] md:text-sm">Gấu tốt nghiệp</span></div>
-    </div>
-  </section>
-
-  <section class="site-section px-4 md:px-margin-desktop py-8 md:py-20" id="products">
-    <div class="max-w-container-max mx-auto">
-      <div class="flex items-end justify-between mb-4 md:mb-10">
-        <div>
-          <p class="eyebrow mb-1">Được chọn nhiều</p>
-          <h2 class="text-headline-lg font-headline-lg italic">Sản phẩm nổi bật</h2>
-        </div>
-        <a class="hidden md:inline text-primary text-sm" href="collection.html">Xem tất cả →</a>
-      </div>
-
-      <div class="snap-row md:gap-6">
-        <a href="collection.html" class="snap-card snap-card--featured md:col-span-8 group reveal-on-scroll">
-          <div class="relative aspect-[4/5] md:aspect-[16/9] rounded-2xl overflow-hidden mb-2.5">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Mâm lễ cưới hỏi" src="assets/images/mam-qua-1.jpg">
-            <span class="absolute top-3 left-3 bg-primary text-white text-[11px] px-2.5 py-1 rounded-full">Bán chạy</span>
-          </div>
-          <div>
-            <h3 class="text-headline-sm">Mâm lễ cưới hỏi</h3>
-            <p class="text-[12px] text-on-surface-variant">Theo tone lễ</p>
-            <span class="text-primary text-[13px]">từ 3.000.000₫</span>
-          </div>
-        </a>
-        <a href="collection.html" class="snap-card md:col-span-4 group reveal-on-scroll">
-          <div class="relative aspect-[4/5] rounded-2xl overflow-hidden mb-2.5">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Hồng trái tim" src="assets/images/profile-rose.jpg">
-          </div>
-          <h3 class="text-headline-sm">Hồng trái tim</h3>
-          <p class="text-[13px] text-on-surface-variant">Hoa tươi / hoa sáp</p>
-        </a>
-        <a href="collection.html" class="snap-card md:col-span-6 group reveal-on-scroll">
-          <div class="relative aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden mb-2.5">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Hoa tiền" src="assets/images/hoa-tien-1.jpg">
-          </div>
-          <div>
-            <h3 class="text-headline-sm">Hoa tiền</h3>
-            <span class="text-primary text-[13px]">Công 250.000₫</span>
-          </div>
-        </a>
-        <a href="collection.html" class="snap-card md:col-span-6 group reveal-on-scroll">
-          <div class="relative aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden mb-2.5">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Hoa sáp thơm" src="assets/images/hoa-sap.jpg">
-          </div>
-          <h3 class="text-headline-sm">Hoa sáp thơm</h3>
-          <p class="text-[13px] text-on-surface-variant">Bền màu, giữ form lâu</p>
-        </a>
-      </div>
-      <a class="md:hidden mt-4 inline-flex items-center text-primary text-sm" href="collection.html">Xem toàn bộ bộ sưu tập →</a>
-    </div>
-  </section>
-
-  <section class="site-section px-4 md:px-margin-desktop py-8 md:py-20">
-    <div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-4 md:gap-10 items-center">
-      <div class="relative h-52 md:h-[560px] rounded-2xl overflow-hidden reveal-on-scroll">
-        <img class="w-full h-full object-cover" alt="Mâm quả cưới hỏi" src="assets/images/mam-qua-2.jpg">
-      </div>
-      <div class="bg-white/80 backdrop-blur-md rounded-2xl p-5 md:p-12 shadow-[0_16px_40px_-24px_rgba(156,64,75,0.4)] reveal-on-scroll">
-        <p class="eyebrow mb-2">Về tiệm</p>
-        <h2 class="text-headline-lg mb-3">Mến Flower tại Huế</h2>
-        <p class="text-[14.5px] md:text-body-lg text-on-surface-variant mb-4">
-          Shop nhận làm hoa sáp thơm, mâm quả cưới hỏi kết Long Phụng và quà tốt nghiệp. Mỗi mâm chỉnh theo tone lễ và ngân sách bạn chọn.
-        </p>
-        <ul class="space-y-2 text-sm mb-5">
-          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Kết rồng phượng, trang trí xe hoa</li>
-          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Hoa tiền theo mẫu, công 250.000₫</li>
+  <section class="hero">
+    <img src="assets/images/hero-cover.jpg" alt="Mâm lễ cưới hỏi Mến Flower Shop">
+    <div class="hero__copy">
+      <div class="wrap">
+        <p class="hero__kicker">Huế · Mến Runbyy</p>
+        <h1>Mâm quả cưới hỏi, hoa sáp thơm</h1>
+        <p class="hero__lead">Nhận làm theo mẫu, chỉnh tone lễ và gửi ảnh xác nhận trước khi giao.</p>
+        <ul class="hero__points">
+          <li>Mâm lễ Long Phụng từ 3.000.000₫</li>
+          <li>Hoa tiền công 250.000₫</li>
+          <li>Đặt nhanh qua Facebook hoặc gọi điện</li>
         </ul>
-        <a class="text-primary italic font-headline-sm text-[22px]" href="about.html">Tìm hiểu thêm →</a>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer px-4 md:px-margin-desktop py-8 md:py-16 bg-[#2a1718] text-[#feedec]">
-    <div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
-      <div class="col-span-2 md:col-span-1">
-        <a href="index.html" class="brand-logo text-[30px] text-primary-fixed-dim">Mến <em>Flower</em></a>
-        <p class="text-[13px] text-white/70 mt-2">VQT, Hương Phong, TP. Huế<br>0905 823 326</p>
+  <div class="trust">
+    <div><span class="material-symbols-outlined">location_on</span> Tiệm hoa tại Huế</div>
+    <div><span class="material-symbols-outlined">chat</span> Đặt qua Facebook</div>
+    <div><span class="material-symbols-outlined">photo_camera</span> Gửi ảnh trước khi giao</div>
+    <div><span class="material-symbols-outlined">local_florist</span> Làm theo mẫu của bạn</div>
+  </div>
+
+  <section class="consult">
+    <div class="wrap">
+      <div class="consult__box">
+        <h2>Tư vấn chọn hoa</h2>
+        <p class="consult__hint">Chọn dòng sản phẩm bạn cần, shop tư vấn mẫu phù hợp.</p>
+        <label class="consult__label" for="topic">Chủ đề</label>
+        <select id="topic">
+          <option value="collection.html">Tất cả</option>
+          <option value="collection.html?cat=wedding">Mâm quả cưới hỏi</option>
+          <option value="collection.html?cat=soap">Hoa sáp thơm</option>
+          <option value="collection.html?cat=money">Hoa tiền</option>
+          <option value="collection.html?cat=fresh">Hoa tươi / hồng trái tim</option>
+        </select>
+        <a class="btn" href="collection.html" data-consult-go>Xem mẫu</a>
+        <p class="consult__phone">Hoặc gọi <a href="tel:0905823326">0905 823 326</a> để đặt theo thiết kế riêng.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Mẫu nổi bật</h2>
+        <div class="tabs">
+          <a class="is-current" href="collection.html">Tất cả</a>
+          <a href="collection.html?cat=wedding">Mâm quả</a>
+          <a href="collection.html?cat=soap">Hoa sáp</a>
+          <a href="collection.html?cat=money">Hoa tiền</a>
+        </div>
+      </div>
+      <div class="circles">
+        <a class="circle" href="collection.html?cat=wedding">
+          <img src="assets/images/mam-qua-1.jpg" alt="Mâm quả">
+          <span>Mâm quả cưới</span>
+        </a>
+        <a class="circle" href="collection.html?cat=soap">
+          <img src="assets/images/hoa-sap.jpg" alt="Hoa sáp">
+          <span>Hoa sáp thơm</span>
+        </a>
+        <a class="circle" href="collection.html?cat=money">
+          <img src="assets/images/hoa-tien-1.jpg" alt="Hoa tiền">
+          <span>Hoa tiền</span>
+        </a>
+        <a class="circle" href="collection.html?cat=fresh">
+          <img src="assets/images/profile-rose.jpg" alt="Hồng trái tim">
+          <span>Hồng trái tim</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--peach">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sản phẩm nổi bật</h2>
+        <a href="collection.html">Xem tất cả</a>
+      </div>
+      <div class="grid-4">
+        <article class="p-card">
+          <a href="collection.html?cat=wedding">
+            <div class="p-card__media">
+              <img src="assets/images/mam-qua-1.jpg" alt="Mâm lễ cưới hỏi">
+              <span class="badge">Bán chạy</span>
+            </div>
+            <h3>Mâm lễ cưới hỏi</h3>
+            <p class="p-card__price">Từ 3.000.000 đ</p>
+          </a>
+        </article>
+        <article class="p-card">
+          <a href="collection.html?cat=wedding">
+            <div class="p-card__media">
+              <img src="assets/images/hero-cover.jpg" alt="Kết rồng phượng">
+              <span class="badge badge--new">Mới</span>
+            </div>
+            <h3>Kết rồng phượng</h3>
+            <p class="p-card__price">Báo giá theo mâm</p>
+          </a>
+        </article>
+        <article class="p-card">
+          <a href="collection.html?cat=soap">
+            <div class="p-card__media">
+              <img src="assets/images/hoa-sap.jpg" alt="Hoa sáp thơm">
+              <span class="badge badge--ship">Theo mẫu</span>
+            </div>
+            <h3>Hoa sáp thơm</h3>
+            <p class="p-card__price">Nhắn để chọn mẫu</p>
+          </a>
+        </article>
+        <article class="p-card">
+          <a href="collection.html?cat=fresh">
+            <div class="p-card__media">
+              <img src="assets/images/profile-rose.jpg" alt="Hồng trái tim">
+            </div>
+            <h3>Hồng trái tim</h3>
+            <p class="p-card__price">Nhắn để báo giá</p>
+          </a>
+        </article>
+      </div>
+      <a class="more" href="collection.html">Xem thêm bộ sưu tập</a>
+    </div>
+  </section>
+
+  <section class="banner">
+    <img src="assets/images/mam-qua-2.jpg" alt="Mâm quả cưới hỏi">
+    <div class="banner__copy">
+      <p>Chuyên môn của tiệm</p>
+      <h2>Mâm quả Long Phụng</h2>
+      <p>Chỉnh tone lễ, kết rồng phượng, trang trí xe hoa theo ngày cưới hỏi.</p>
+    </div>
+  </section>
+
+  <section class="section section--blue">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="dark">Hoa tiền · Hoa sáp</h2>
+        <div class="tabs">
+          <a href="collection.html?cat=money">Hoa tiền</a>
+          <a href="collection.html?cat=soap">Hoa sáp</a>
+        </div>
+      </div>
+      <div class="grid-4">
+        <article class="p-card">
+          <a href="collection.html?cat=money">
+            <div class="p-card__media"><img src="assets/images/hoa-tien-1.jpg" alt="Hoa tiền xôm to"></div>
+            <h3>Hoa tiền xôm to</h3>
+            <p class="p-card__price">Công 250.000 đ</p>
+          </a>
+        </article>
+        <article class="p-card">
+          <a href="collection.html?cat=money">
+            <div class="p-card__media"><img src="assets/images/hoa-tien-2.jpg" alt="Hoa tiền theo mẫu"></div>
+            <h3>Hoa tiền theo mẫu</h3>
+            <p class="p-card__price">Công 250.000 đ</p>
+          </a>
+        </article>
+        <article class="p-card">
+          <a href="collection.html?cat=soap">
+            <div class="p-card__media"><img src="assets/images/hoa-sap.jpg" alt="Hoa sáp thơm"></div>
+            <h3>Hoa sáp thơm</h3>
+            <p class="p-card__price">Bền màu, giữ form</p>
+          </a>
+        </article>
+        <article class="p-card">
+          <a href="collection.html?cat=wedding">
+            <div class="p-card__media"><img src="assets/images/mam-qua-4.jpg" alt="Mâm lễ tone đỏ"></div>
+            <h3>Mâm lễ tone đỏ</h3>
+            <p class="p-card__price">Từ 3.000.000 đ</p>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>Vì sao chọn Mến Flower</h2></div>
+      <div class="why">
+        <article>
+          <span class="material-symbols-outlined" style="color:#2d8a3e">check_circle</span>
+          <h3>Làm theo mẫu</h3>
+          <p>Gửi ảnh mẫu trên Facebook, shop làm đúng form và ngân sách.</p>
+        </article>
+        <article>
+          <span class="material-symbols-outlined" style="color:#2d8a3e">photo_camera</span>
+          <h3>Xác nhận ảnh</h3>
+          <p>Chụp gửi bạn xem trước khi giao mâm lễ hoặc bó hoa.</p>
+        </article>
+        <article>
+          <span class="material-symbols-outlined" style="color:#2d8a3e">pin_drop</span>
+          <h3>Tiệm tại Huế</h3>
+          <p>VQT, Hương Phong, TP. Huế. Nhận tại shop hoặc giao theo thỏa thuận.</p>
+        </article>
+        <article>
+          <span class="material-symbols-outlined" style="color:#2d8a3e">call</span>
+          <h3>Tư vấn nhanh</h3>
+          <p>Gọi 0905 823 326 hoặc nhắn Facebook Mến Runbyy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h4>Mến Flower Shop · Huế</h4>
+        <p>VQT, Hương Phong, TP. Huế</p>
+        <p class="phone"><a href="tel:0905823326">0905 823 326</a></p>
+        <p>Chuyên mâm quả cưới hỏi, hoa sáp thơm, hoa tiền và gấu tốt nghiệp.</p>
       </div>
       <div>
-        <p class="eyebrow text-primary-fixed-dim mb-2">Khám phá</p>
-        <ul class="space-y-1.5 text-sm text-white/80">
+        <h4>Danh mục</h4>
+        <ul>
           <li><a href="index.html">Trang chủ</a></li>
           <li><a href="collection.html">Bộ sưu tập</a></li>
           <li><a href="about.html">Về chúng tôi</a></li>
@@ -184,19 +279,18 @@
         </ul>
       </div>
       <div>
-        <p class="eyebrow text-primary-fixed-dim mb-2">Đặt hàng</p>
-        <a class="text-sm text-white/80" href="https://www.facebook.com/men.phan.9843" target="_blank" rel="noopener">Facebook Mến Runbyy</a>
-      </div>
-      <div class="col-span-2 md:col-span-1">
-        <p class="eyebrow text-primary-fixed-dim mb-2">Gọi ngay</p>
-        <a class="text-lg italic font-headline-sm" href="tel:0905823326">0905 823 326</a>
+        <h4>Đặt hàng</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/men.phan.9843" target="_blank" rel="noopener">Facebook Mến Runbyy</a></li>
+          <li><a href="tel:0905823326">Gọi điện thoại</a></li>
+        </ul>
       </div>
     </div>
   </footer>
 
   <div class="float-cta">
-    <a href="tel:0905823326" class="bg-secondary" aria-label="Gọi điện"><span class="material-symbols-outlined">call</span></a>
-    <a href="https://www.facebook.com/men.phan.9843" target="_blank" rel="noopener" class="bg-primary" aria-label="Facebook"><span class="material-symbols-outlined">chat</span></a>
+    <a href="tel:0905823326" style="background:#2d8a3e" aria-label="Gọi điện"><span class="material-symbols-outlined">call</span></a>
+    <a href="https://www.facebook.com/men.phan.9843" target="_blank" rel="noopener" style="background:#c62828" aria-label="Facebook"><span class="material-symbols-outlined">chat</span></a>
   </div>
   <script src="assets/js/site.js"></script>
 </body>
