@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setOpen(false);
     toggle.addEventListener("click", () => setOpen(!menu.classList.contains("is-open")));
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
   }
 
   const consult = document.querySelector("[data-consult-go]");
