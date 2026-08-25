@@ -105,4 +105,54 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     revealItems.forEach((item) => item.classList.add("is-in"));
   }
+
+  const cardsForPhoto = document.querySelectorAll(".p-card");
+  if (cardsForPhoto.length) {
+    const box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Xem ảnh sản phẩm");
+    box.innerHTML = `
+      <button type="button" class="lightbox__close" aria-label="Đóng">×</button>
+      <div class="lightbox__stage"><img alt=""></div>
+      <p class="lightbox__cap"></p>
+    `;
+    document.body.appendChild(box);
+
+    const photo = box.querySelector("img");
+    const caption = box.querySelector(".lightbox__cap");
+    const closeBtn = box.querySelector(".lightbox__close");
+
+    const closePhoto = () => {
+      box.classList.remove("is-open");
+      document.body.classList.remove("lightbox-open");
+      photo.removeAttribute("src");
+    };
+
+    const openPhoto = (card) => {
+      const img = card.querySelector(".p-card__media img");
+      if (!img) return;
+      const title = (card.querySelector("h3")?.textContent || img.alt || "").trim();
+      photo.src = img.currentSrc || img.src;
+      photo.alt = img.alt || title;
+      caption.innerHTML = `${title}<span class="lightbox__hint">Chạm ảnh để đóng</span>`;
+      box.classList.add("is-open");
+      document.body.classList.add("lightbox-open");
+      closeBtn.focus();
+    };
+
+    cardsForPhoto.forEach((card) => {
+      card.addEventListener("click", (event) => {
+        if (event.target.closest(".p-card__cta")) return;
+        openPhoto(card);
+      });
+    });
+
+    closeBtn.addEventListener("click", closePhoto);
+    box.querySelector(".lightbox__stage").addEventListener("click", closePhoto);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && box.classList.contains("is-open")) closePhoto();
+    });
+  }
 });
